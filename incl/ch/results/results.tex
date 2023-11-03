@@ -1,0 +1,235 @@
+In this chapter, the results of the test are presented. There are two levels to the test, one where the models are tested on keywords where the same kind of noise is applied, and one where more types of noise are added to the test set.
+
+\section{Only Testing on the Same Noise}
+Here the different models are tested using, a test set created of different sound files where the same kind of noise, as the model is trained on, is added. The results are presented in \Cref{tab:test_noise}, where a subtable for each noise level is presented. 
+\begin{table}[ht]
+    \centering
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr-10    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & 0.3119  & 0.3445 & 0.3295 \\
+        KWT-2    & 0.3007  & 0.3404 & 0.3487 \\
+        KWT-3    & 0.294  & 0.3159 & 0.3595 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr -10}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr-5    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & 0.4672  & 0.5131 & 0.5028 \\
+        KWT-2    & 0.4519  & 0.5139 & 0.5328 \\
+        KWT-3    & 0.4348  & 0.4973 & 0.5706 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr -5}
+    \end{subtable}
+     
+     
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr0    & Baseline & non-noise & noisy \\ \midrule
+        KWT-1    & 0.5936  & 0.6664 & 0.698 \\
+        KWT-2    & 0.5899  & 0.6864 & 0.7178 \\
+        KWT-3    & 0.5706  & 0.6181 & 0.7215 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 0}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr5    & Baseline & non-noise & noisy \\ \midrule
+        KWT-1    & 0.6939  & 0.7534 & 0.7927 \\
+        KWT-2    & 0.6824  & 0.7954 & 0.7969 \\
+        KWT-3    & 0.6633  & 0.7498 & 0.7883 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 5}
+    \end{subtable}
+
+
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr10    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & 0.7383  & 0.8287 & 0.8368 \\
+        KWT-2    & 0.7464  & 0.8415 & 0.8411 \\
+        KWT-3    & 0.7302  & 0.8205 & 0.8537 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 10}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr15    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & 0.7836  & 0.8418 & 0.8549 \\
+        KWT-2    & 0.7675  & 0.8634 & 0.8725 \\
+        KWT-3    & 0.7543  & 0.8345 & 0.842 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 15}
+    \end{subtable}
+
+    
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr20    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & 0.8024  & 0.8610 & 0.8571 \\
+        KWT-2    & 0.7965  & 0.8730 & 0.8737 \\
+        KWT-3    & 0.7817  & 0.8379 & 0.8655 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 20}
+    \end{subtable}
+    \caption{}
+    \label{tab:test_noise}
+\end{table}
+
+
+\section{Testing on More Noise}
+\begin{table}[ht]
+    \centering
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr-10    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr -10}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr-5    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr -5}
+    \end{subtable}
+     
+     
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr0    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 0}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr5    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 5}
+    \end{subtable}
+
+
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr10    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 10}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr15    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 15}
+    \end{subtable}
+
+    
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr20    & Baseline & non-noisy & noisy \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 20}
+    \end{subtable}
+    \caption{}
+    \label{tab:test_more_noise}
+\end{table}

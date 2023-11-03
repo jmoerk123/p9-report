@@ -1,0 +1,15 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Keyword Spotting}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Speech Feature Extraction}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}DNN KWS acoustic model}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Posterior Handling}{5}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Self-Supervised Learning}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Self-Supervised Learning}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Data2vec}{6}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Results}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Only Testing on the Same Noise}{8}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Testing on More Noise}{8}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Discussion}{11}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{12}{chapter.6}%
+\contentsline {chapter}{Bibliography}{13}{chapter*.11}%
+\contentsline {chapter}{\numberline {A}Constraints}{14}{appendix.A}%

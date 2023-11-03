@@ -1,0 +1,405 @@
+% Base packages ----------------------------------------------------------------
+\usepackage{ragged2e}
+\usepackage{verbatim}
+\usepackage[T1]{fontenc}     % adds support for printing accented characters
+\usepackage[utf8]{inputenc}  % adds support for inputting accented characters
+
+
+\usepackage[square]{natbib}  %citation style
+\bibliographystyle{apalike} 
+\setcitestyle{aysep={:},yysep={;}}
+%\let\cite=\citeauthor
+
+\usepackage{hyperref}        % insert clickable hyperlinks
+\usepackage{lastpage}        % reference last page (used to count numbered pages)
+
+
+% Math packages ----------------------------------------------------------------
+\usepackage{amsmath,amssymb,stmaryrd,mathtools,mathrsfs,bbm}  
+
+% Other symbols 
+\usepackage{textcomp} 
+\usepackage{physics}
+\usepackage{siunitx}    % si-units
+\usepackage{gensymb}
+
+% Figure packages --------------------------------------------------------------
+\usepackage[dvipsnames, table, xcdraw]{xcolor}    % font colouring functionality
+\usepackage{pgfplots}
+\usepackage{graphicx}              % handling of images
+\usepackage{booktabs}              % improved tables
+\usepackage{array}                 % setting rowheight
+
+\usepackage{algorithm}             % algorithm floats
+\usepackage[noend]{algpseudocode}  % pseudocode listings
+\usepackage{listings}              % source code listings
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{colortbl}              % table color
+\usepackage{multirow}
+\usepackage{makecell}
+% Styling packages -------------------------------------------------------------
+
+\usepackage{microtype}             % improve full justification and font kerning
+\usepackage{emptypage}             % suppress page numbering on empty pages
+\usepackage{fancyhdr}              % easy customisation of headers and footers
+\usepackage{titlesec}              % easy customisation of section titles
+\usepackage[margin=3cm]{geometry}  % adjust page margins
+\usepackage[toc,page]{appendix}    % improved appendix control
+\usepackage{framed}                % environments package
+\usepackage[framed,amsmath,thmmarks]{ntheorem} % environments package
+\usepackage{stfloats}              % linking tables to bottom of page
+\usepackage{etoolbox}              % align removal spacing
+\usepackage[parfill]{parskip}      % removes indent on new line
+
+% Font packages ----------------------------------------------------------------
+\usepackage{lmodern}  % improved default font
+%todo
+\usepackage[
+%  disable,                  % turn off todonotes
+  colorinlistoftodos,        % enable a coloured square in the list of todos
+  textwidth=\marginparwidth, % set the width of the todonotes
+  textsize=scriptsize,       % size of the text in the todonotes
+  ]{todonotes}
+
+% Theorem environments -----------------------------------------------------------
+
+% \theoremheaderfont{\normalfont\bfseries}
+% \theorembodyfont{\normalfont}
+% \theoremstyle{break}
+% \def\theoremframecommand{{\color{ForestGreen!50}\vrule width 5pt \hspace{5pt}}}
+% \newshadedtheorem{lemma}{Lemma}[chapter]
+
+% \def\theoremframecommand{{\color{red!50}\vrule width 5pt \hspace{5pt}}}
+% \newshadedtheorem{example}{Example}[chapter]
+
+% \def\theoremframecommand{{\color{ForestGreen!80}\vrule width 5pt \hspace{5pt}}}
+% \newshadedtheorem{corollary}{Corollary}[chapter]
+
+% \def\theoremframecommand{{\color{MidnightBlue!100}\vrule width 5pt \hspace{5pt}}}
+% \newshadedtheorem{definition}{Definition}[chapter]
+
+% \def\theoremframecommand{{\color{RoyalBlue!70}\vrule width 5pt \hspace{5pt}}}
+% \newshadedtheorem{theorem}{Theorem}[chapter]
+
+% \def\theoremframecommand{{\color{RoyalBlue!30}\vrule width 5pt \hspace{5pt}}}
+% \newshadedtheorem{proof}{Proof}[chapter]
+
+% \renewcommand\qedsymbol{$\blacksquare$}           % use black square as QED
+
+% \def\exampleautorefname{Example}
+
+% \def\definitionautorefname{Definition}
+
+% Redefinition of theoremstyle break used for defined environments
+
+\makeatletter
+\renewtheoremstyle{break}%
+  {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont
+          ##1\ ##2\theorem@separator}\hbox{\strut}}}]}%
+  {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont
+%          ##1\ ##2\ (##3)\theorem@separator}\hbox{\strut}}}]}% DELETED
+           ##1\ ##2:\ ##3\theorem@separator}\hbox{\strut}}}]}% NEW
+\makeatother
+
+
+
+\definecolor{defcolor}{rgb}{0.36, 0.54, 0.66}
+
+\definecolor{lemmacolor}{rgb}{0.66, 0.89, 0.86}
+
+\definecolor{corollarycolor}{rgb}{0.13, 0.67, 0.8}
+
+\definecolor{thmcolor}{rgb}{0.29, 0.70, 0.70}
+
+\definecolor{axiomcolor}{rgb}{1, 0.84, 0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A theorem environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremsymbol{}
+\theoremstyle{break}
+\def\theoremframecommand{{\color{thmcolor}\vrule width 3pt \hspace{5pt}}}
+\newshadedtheorem{theorem}{Theorem}[chapter]
+\newenvironment{theo}[1][\unskip]{%
+		\begin{theorem}[#1]
+}{%
+		\end{theorem}
+}
+\def\theoremautorefname{Theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Proof environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\theoremheaderfont{\normalfont\itshape\bfseries}
+\theorembodyfont{\normalfont}
+\theoremsymbol{\rule{1ex}{1ex}}
+\theoremstyle{break}
+\newtheorem*{proof}{Proof}[theorem]
+\newenvironment{pro}[1][\unskip]{%
+		\begin{proof}[#1]
+}{%
+        
+		\end{proof}
+}
+\def\proofautorefname{Proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Definition environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremsymbol{}
+\theoremstyle{break}
+\def\theoremframecommand{{\color{defcolor}\vrule width 3pt 
+\hspace{5pt}}}
+\newshadedtheorem{definition}[theorem]{Definition}
+\newenvironment{defi}[1][\unskip]{%
+		\begin{defintion}[#1]
+}{%
+		\end{definition}
+}
+\def\definitionautorefname{Definition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% An axiom environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremsymbol{}
+\theoremstyle{break}
+\def\theoremframecommand{{\color{axiomcolor}\vrule width 3pt \hspace{5pt}}}
+\newshadedtheorem{axiom}[theorem]{Axiom}
+\newenvironment{axi}[1][\unskip]{%
+		\begin{axiom}[#1]
+}{%
+		\end{axiom}
+}
+\def\axiomautorefname{Axiom}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Lemma environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremsymbol{}
+\theoremstyle{break}
+\def\theoremframecommand{{\color{lemmacolor}\vrule width 3pt \hspace{5pt}}}
+\newshadedtheorem{lemma}[theorem]{Lemma}
+\newenvironment{lemm}[1][\unskip]{%
+		\begin{lemma}[#1]
+}{%
+		\end{lemma}
+}
+\def\lemmaautorefname{Lemma}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Corollary environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremsymbol{}
+\theoremstyle{break}
+\def\theoremframecommand{{\color{corollarycolor}\vrule width 3pt \hspace{5pt}}}
+\newshadedtheorem{corollary}[theorem]{Corollary}
+\newenvironment{corol}[1][\unskip]{%
+		\begin{corollary}[#1]
+}{%
+		\end{corollary}
+}
+\def\corollaryautorefname{Corollary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% An example environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremheaderfont{\normalfont\bfseries}
+\theorembodyfont{\normalfont}
+\theoremsymbol{}
+\theoremstyle{break}
+\theoremprework{\bigskip\hrule}
+\theorempostwork{\hrule\bigskip}
+\newtheorem{example}[theorem]{Example}
+\newenvironment{exa}[1][\unskip]{
+\begin{example}[#1]
+}{
+\end{example}
+}
+\def\exampleautorefname{Example}
+
+% Sets --------------------------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}  % natural numbers
+\newcommand{\Z}{\mathbb{Z}}  % integers
+\newcommand{\Q}{\mathbb{Q}}  % rational numbers
+\newcommand{\R}{\mathbb{R}}  % real numbers
+\newcommand{\C}{\mathbb{C}}  % complex numbers
+\newcommand{\I}{\mathbb{I}}
+
+
+
+
+\let\cite=\citep
+\renewcommand{\exp}[1]{e^{#1}}
+
+
+% Colours
+\definecolor{aaublue}{RGB}{33,26,82}
+\usepackage[table]{xcolor}
+
+
+
+% Headers and footers -----------------------------------------------------------
+\fancyhead{}                      % clear default header fields
+\setlength{\headheight}{14pt}
+\fancyhead[LE,RO]{\projectgroup}  % left on even, right on odd
+\fancyhead[RE]{\leftmark}         % chapter name
+\fancyhead[LO]{\rightmark}        % sections name
+\fancyfoot{}                      % clear default footer fields
+\fancyfoot[CE,CO]{\thepage}       % centered page numbers
+\pagestyle{fancy}                 % activate fancy style
+
+
+% Chapter titles ----------------------------------------------------------------
+% http://mirrors.dotsrc.org/ctan/macros/latex/contrib/titlesec/titlesec.pdf
+\titleformat
+{\chapter}
+[hang]
+{\Huge\bfseries}
+{\thechapter\enspace{|}\enspace}
+{0pt}
+{\Huge\bfseries}
+
+
+
+
+\numberwithin{equation}{chapter}  % resets the counter of equation number each time a new \section is used
+
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{comment}
+\usepackage{advdate}
+\usepackage{dcolumn}
+\usepackage{amsfonts}
+
+\captionsetup[figure]{font={it}}
+\captionsetup[table]{font={it}}
+% table
+\renewcommand{\arraystretch}{1.5}
+
+%include bibliography in the table of content
+\usepackage[nottoc]{tocbibind}
+
+
+% Matrix v_line
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+   \hskip -\arraycolsep
+   \let\@ifnextchar\new@ifnextchar
+   \array{#1}}
+\makeatother
+% Arrows for text 
+%\usetikzlibrary{positioning, arrows.meta}
+\tikzset{%
+    myarrow/.style = {-Stealth, shorten >=5pt}
+}
+\usetikzlibrary{shapes,shadows,arrows,positioning,graphs,shapes.geometric,arrows.meta}
+\usetikzlibrary{calc,intersections,through,hobby}
+\usetikzlibrary{matrix}
+\tikzset{point/.style={circle,inner sep=0pt,minimum size=3pt,fill=red}}
+\newcommand{\mypoint}[2]{\tikz[remember picture]{\node[inner sep=0, anchor=base](#1){$#2$};}}
+%Fancy circles.
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+%pagebreak align
+\allowdisplaybreaks
+
+%For pseudo code
+\usepackage{algorithm,algpseudocode,float}
+\usepackage{lipsum}
+\usepackage[noend]{algpseudocode}
+\makeatletter
+\newenvironment{breakablealgorithm}
+  {% \begin{breakablealgorithm}
+   \begin{center}
+     \refstepcounter{algorithm}% New algorithm
+     \hrule height.8pt depth0pt \kern2pt% \@fs@pre for \@fs@ruled
+     \renewcommand{\caption}[2][\relax]{% Make a new \caption
+       {\raggedright\textbf{\ALG@name~\thealgorithm} ##2\par}%
+       \ifx\relax##1\relax % #1 is \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##2}%
+       \else % #1 is not \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##1}%
+       \fi
+       \kern2pt\hrule\kern2pt
+     }
+  }{% \end{breakablealgorithm}
+     \kern2pt\hrule\relax% \@fs@post for \@fs@ruled
+   \end{center}
+  }
+\makeatother
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\usepackage{cleveref}
+\usepackage[american]{circuitikz}
+
+\renewcommand{\b}[1]{%
+  \ensuremath{\left[#1\right]}%
+}
+
+\newcommand{\p}[1]{%
+  \ensuremath{\left(#1\right)}%
+}
+
+\newcommand{\diag}[1]{%
+  \ensuremath{\text{diag}\left(#1\right)}%
+}
+
+\newcommand{\floor}[1]{%
+  \ensuremath{\left\lfloor #1 \right\rfloor}%
+}
+
+\newcommand{\sigm}{%
+  \ensuremath{\Sigma^{-1}}%
+}
+
+\newcommand{\sigtilde}{%
+  \ensuremath{\Tilde{\Sigma}}%
+}
+\renewcommand{\d}{%
+  \ensuremath{\underline{d}}%
+}
+\renewcommand{\mathbf}[1]{%
+  \ensuremath{\boldsymbol{#1}}%
+}
+\newcommand{\D}{%
+  \ensuremath{\underline{D}}%
+}
+\newcommand{\x}{%
+  \ensuremath{\underline{x}}%
+}
+
+
+\newcommand{\ls}{%
+  \ensuremath{\limsup_{n\rightarrow \infty}}%
+}
+
+\renewcommand{\part}[2]{%
+  \ensuremath{\frac{\partial #1}{\partial #2}}%
+}
+
+\newcommand{\mpart}[2]{%
+  \frac{\partial #1}{\partial #2}%
+}
+
+
+
+
+\usepackage{stackengine}
+\def\defeq{\mathrel{\ensurestackMath{\stackon[2pt]{=}{\scriptstyle\Delta}}}}
+
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
+\usepackage{tikz-3dplot}

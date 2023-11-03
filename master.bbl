@@ -1,0 +1,44 @@
+\begin{thebibliography}{}
+
+\bibitem[Ba et~al., 2016]{ba2016layer}
+Ba, J.~L., Kiros, J.~R., and Hinton, G.~E. (2016).
+\newblock Layer normalization.
+\newblock {\em arXiv preprint arXiv:1607.06450}.
+
+\bibitem[Baevski et~al., 2022]{baevski2022data2vec}
+Baevski, A., Hsu, W.-N., Xu, Q., Babu, A., Gu, J., and Auli, M. (2022).
+\newblock Data2vec: A general framework for self-supervised learning in speech,
+  vision and language.
+\newblock In {\em International Conference on Machine Learning}, pages
+  1298--1312. PMLR.
+
+\bibitem[Balestriero et~al., 2023]{balestriero2023cookbook}
+Balestriero, R., Ibrahim, M., Sobal, V., Morcos, A., Shekhar, S., Goldstein,
+  T., Bordes, F., Bardes, A., Mialon, G., Tian, Y., et~al. (2023).
+\newblock A cookbook of self-supervised learning.
+\newblock {\em arXiv preprint arXiv:2304.12210}.
+
+\bibitem[Bovbjerg and Tan, 2023]{bovbjerg2023improving}
+Bovbjerg, H.~S. and Tan, Z.-H. (2023).
+\newblock Improving label-deficient keyword spotting through self-supervised
+  pretraining.
+\newblock In {\em 2023 IEEE International Conference on Acoustics, Speech, and
+  Signal Processing Workshops (ICASSPW)}, pages 1--5. IEEE.
+
+\bibitem[L{\'o}pez-Espejo et~al., 2021]{lopez2021deep}
+L{\'o}pez-Espejo, I., Tan, Z.-H., Hansen, J.~H., and Jensen, J. (2021).
+\newblock Deep spoken keyword spotting: An overview.
+\newblock {\em IEEE Access}, 10:4169--4199.
+
+\bibitem[Rothman, 2020]{rothman2020artificial}
+Rothman, D. (2020).
+\newblock {\em Artificial Intelligence By Example: Acquire advanced AI, machine
+  learning, and deep learning design skills}.
+\newblock Packt Publishing Ltd.
+
+\bibitem[Ulyanov et~al., 2016]{ulyanov2016instance}
+Ulyanov, D., Vedaldi, A., and Lempitsky, V. (2016).
+\newblock Instance normalization: The missing ingredient for fast stylization.
+\newblock {\em arXiv preprint arXiv:1607.08022}.
+
+\end{thebibliography}

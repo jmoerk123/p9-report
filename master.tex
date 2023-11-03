@@ -1,0 +1,56 @@
+\documentclass[11pt,a4paper,twoside,openright, openany]{book}
+\input{preamble}
+\def\projecttitle       {Self Supervised Learning for Noise-Robust Key Word Spotting. }
+\def\projectsubtitle    {}
+\def\projectperiod      {fall-semester 2023}
+\def\projectdegree      {Mathematics-Technology}
+\def\projectsemester    {9th Semester}
+\def\projectsupervisors {Zheng-Hua Tan \\ Christophe Biscio}
+\def\projectgroup       {jmark18@student.aau.dk}
+\def\projectauthors     {
+Jacob Mørk
+}
+
+\input{macros}
+
+\begin{document}
+%\pagestyle{empty}
+\cleardoublepage
+\frontmatter\pagenumbering{roman}
+\include{incl/misc/frontpage}
+\include{incl/misc/colophon}
+\include{incl/misc/titlepage}
+\include{incl/misc/underskrifter}
+\include{incl/misc/preface}
+%\include{incl/misc/nomenclature}
+
+\tableofcontents
+
+\mainmatter\pagenumbering{arabic}
+
+% Input chapters
+    \chapter{Introduction} \label{ch:intro}
+        \input{incl/ch/intro/introduction}
+    
+    \chapter{Keyword Spotting}
+        \input{incl/ch/theory/kws}
+
+    \chapter{Self-Supervised Learning} \label{ch:theory}
+        \input{incl/ch/theory/ssl}
+
+    \chapter{Results}
+        \input{incl/ch/results/results}
+    \chapter{Discussion} \label{ch:discussion}
+        \input{incl/ch/discussion/discussion}
+
+    \chapter{Conclusion}
+        \input{incl/ch/conclusion}
+
+\label{lastofmain}
+\nocite{*}
+\bibliography{incl/bib/references.bib}
+
+\appendix
+\input{incl/ch/appendix/appendix}
+
+\end{document}
