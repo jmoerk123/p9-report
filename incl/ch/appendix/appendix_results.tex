@@ -1,7 +1,4 @@
-In this chapter, the results of the test are presented. There are two levels to the test, one where the models are tested on keywords where the same kind of noise is applied, and one where more types of noise are added to the test set.
-
-\section{Only Testing on the Same Noise}
-Here the different models are tested using, a test set created of different sound files where the same kind of noise, as the model is trained on, is added. The results are presented in \Cref{tab:test_noise}, where a subtable for each noise level is presented. 
+\section{Results}
 \begin{table}[ht]
     \centering
     \begin{subtable}[ht]{0.45\textwidth}
@@ -90,7 +87,7 @@ Here the different models are tested using, a test set created of different soun
         snr15    & Baseline & non-noisy & noisy \\ \midrule
         KWT-1    & 0.7836  & 0.8418 & 0.8549 \\
         KWT-2    & 0.7675  & 0.8634 & 0.8725 \\
-        KWT-3    & 0.7543  & 0.8345 & 0.842 \\
+        KWT-3    & 0.7543  & 0.8345 & 0.8420 \\
         \bottomrule
         \end{tabular}
         \caption{Snr 15}
@@ -113,12 +110,11 @@ Here the different models are tested using, a test set created of different soun
         \end{tabular}
         \caption{Snr 20}
     \end{subtable}
-    \caption{}
+    \caption{The results of training models to a specific noise level with two different types of noise, BUS and BBL. The test consist of the same noises.}
     \label{tab:test_noise}
 \end{table}
 
 
-\section{Testing on More Noise}
 \begin{table}[ht]
     \centering
     \begin{subtable}[ht]{0.45\textwidth}
@@ -127,9 +123,9 @@ Here the different models are tested using, a test set created of different soun
         \toprule
         & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
         snr-10    & Baseline & non-noisy & noisy \\ \midrule
-        KWT-1    & --  & -- & -- \\
-        KWT-2    & --  & -- & -- \\
-        KWT-3    & --  & -- & -- \\
+        KWT-1    & 0.2245  & 0.2435 & 0.2306 \\
+        KWT-2    & 0.2035  & 0.2479 & 0.2346 \\
+        KWT-3    & 0.1910  & 0.2316 & 0.2504 \\
         \bottomrule
         \end{tabular}
         \caption{Snr -10}
@@ -141,9 +137,9 @@ Here the different models are tested using, a test set created of different soun
         \toprule
         & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
         snr-5    & Baseline & non-noisy & noisy \\ \midrule
-        KWT-1    & --  & -- & -- \\
-        KWT-2    & --  & -- & -- \\
-        KWT-3    & --  & -- & -- \\
+        KWT-1    & 0.3725  & 0.4006 & 0.4068 \\
+        KWT-2    & 0.3607  & 0.4119 & 0.4325 \\
+        KWT-3    & 0.3446  & 0.4075 & 0.4692 \\
         \bottomrule
         \end{tabular}
         \caption{Snr -5}
@@ -159,9 +155,9 @@ Here the different models are tested using, a test set created of different soun
         \toprule
         & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
         snr0    & Baseline & non-noisy & noisy \\ \midrule
-        KWT-1    & --  & -- & -- \\
-        KWT-2    & --  & -- & -- \\
-        KWT-3    & --  & -- & -- \\
+        KWT-1    & 0.5122  & 0.6143 & 0.6363 \\
+        KWT-2    & 0.5218  & 0.6265 & 0.6500 \\
+        KWT-3    & 0.5027  & 0.5925 & 0.6639 \\
         \bottomrule
         \end{tabular}
         \caption{Snr 0}
@@ -173,9 +169,9 @@ Here the different models are tested using, a test set created of different soun
         \toprule
         & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
         snr5    & Baseline & non-noisy & noisy \\ \midrule
-        KWT-1    & --  & -- & -- \\
-        KWT-2    & --  & -- & -- \\
-        KWT-3    & --  & -- & -- \\
+        KWT-1    & 0.6473  & 0.7097 & 0.7585 \\
+        KWT-2    & 0.6334  & 0.7567 & 0.7616 \\
+        KWT-3    & 0.6139  & 0.7298 & 0.7486 \\
         \bottomrule
         \end{tabular}
         \caption{Snr 5}
@@ -191,9 +187,9 @@ Here the different models are tested using, a test set created of different soun
         \toprule
         & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
         snr10    & Baseline & non-noisy & noisy \\ \midrule
-        KWT-1    & --  & -- & -- \\
-        KWT-2    & --  & -- & -- \\
-        KWT-3    & --  & -- & -- \\
+        KWT-1    & 0.7170  & 0.8084 & 0.8184 \\
+        KWT-2    & 0.7241  & 0.8282 & 0.8255 \\
+        KWT-3    & 0.6861  & 0.8051 & 0.8425 \\
         \bottomrule
         \end{tabular}
         \caption{Snr 10}
@@ -205,9 +201,9 @@ Here the different models are tested using, a test set created of different soun
         \toprule
         & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
         snr15    & Baseline & non-noisy & noisy \\ \midrule
-        KWT-1    & --  & -- & -- \\
-        KWT-2    & --  & -- & -- \\
-        KWT-3    & --  & -- & -- \\
+        KWT-1    & 0.7657  & 0.8365 & 0.8473 \\
+        KWT-2    & 0.7657  & 0.8542 & 0.8688 \\
+        KWT-3    & 0.7318  & 0.8183 & 0.8343 \\
         \bottomrule
         \end{tabular}
         \caption{Snr 15}
@@ -223,13 +219,13 @@ Here the different models are tested using, a test set created of different soun
         \toprule
         & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
         snr20    & Baseline & non-noisy & noisy \\ \midrule
-        KWT-1    & --  & -- & -- \\
-        KWT-2    & --  & -- & -- \\
-        KWT-3    & --  & -- & -- \\
+        KWT-1    & 0.7998  & 0.8423 & 0.8556 \\
+        KWT-2    & 0.7949  & 0.8740 & 0.8707 \\
+        KWT-3    & 0.7816  & 0.8458 & 0.8641 \\
         \bottomrule
         \end{tabular}
         \caption{Snr 20}
     \end{subtable}
-    \caption{}
+    \caption{The results of training models to a specific noise level with two different types of noise, BUS and BBL. The test consist of four noises, BUS, BBL, CAF, and SSN}
     \label{tab:test_more_noise}
 \end{table}

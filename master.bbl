@@ -18,6 +18,18 @@ Balestriero, R., Ibrahim, M., Sobal, V., Morcos, A., Shekhar, S., Goldstein,
 \newblock A cookbook of self-supervised learning.
 \newblock {\em arXiv preprint arXiv:2304.12210}.
 
+\bibitem[Barker et~al., 2015]{barker2015third}
+Barker, J., Marxer, R., Vincent, E., and Watanabe, S. (2015).
+\newblock The third 'chime'speech separation and recognition challenge:
+  Dataset, task and baselines.
+\newblock In {\em 2015 IEEE Workshop on Automatic Speech Recognition and
+  Understanding (ASRU)}, pages 504--511. IEEE.
+
+\bibitem[Berg et~al., 2021]{berg2021keyword}
+Berg, A., O'Connor, M., and Cruz, M.~T. (2021).
+\newblock Keyword transformer: A self-attention model for keyword spotting.
+\newblock {\em arXiv preprint arXiv:2104.00769}.
+
 \bibitem[Bovbjerg and Tan, 2023]{bovbjerg2023improving}
 Bovbjerg, H.~S. and Tan, Z.-H. (2023).
 \newblock Improving label-deficient keyword spotting through self-supervised
@@ -25,10 +37,36 @@ Bovbjerg, H.~S. and Tan, Z.-H. (2023).
 \newblock In {\em 2023 IEEE International Conference on Acoustics, Speech, and
   Signal Processing Workshops (ICASSPW)}, pages 1--5. IEEE.
 
+\bibitem[Dosovitskiy et~al., 2020]{dosovitskiy2020image}
+Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X.,
+  Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S., et~al.
+  (2020).
+\newblock An image is worth 16x16 words: Transformers for image recognition at
+  scale.
+\newblock {\em arXiv preprint arXiv:2010.11929}.
+
+\bibitem[Kolboek et~al., 2016]{kolboek2016speech}
+Kolboek, M., Tan, Z.-H., and Jensen, J. (2016).
+\newblock Speech enhancement using long short-term memory based recurrent
+  neural networks for noise robust speaker verification.
+\newblock In {\em 2016 IEEE spoken language technology workshop (SLT)}, pages
+  305--311. IEEE.
+
 \bibitem[L{\'o}pez-Espejo et~al., 2021]{lopez2021deep}
 L{\'o}pez-Espejo, I., Tan, Z.-H., Hansen, J.~H., and Jensen, J. (2021).
 \newblock Deep spoken keyword spotting: An overview.
 \newblock {\em IEEE Access}, 10:4169--4199.
+
+\bibitem[Loshchilov and Hutter, 2018]{loshchilov2018fixing}
+Loshchilov, I. and Hutter, F. (2018).
+\newblock Fixing weight decay regularization in adam.
+
+\bibitem[Park et~al., 2019]{park2019specaugment}
+Park, D.~S., Chan, W., Zhang, Y., Chiu, C.-C., Zoph, B., Cubuk, E.~D., and Le,
+  Q.~V. (2019).
+\newblock Specaugment: A simple data augmentation method for automatic speech
+  recognition.
+\newblock {\em arXiv preprint arXiv:1904.08779}.
 
 \bibitem[Rothman, 2020]{rothman2020artificial}
 Rothman, D. (2020).
@@ -40,5 +78,16 @@ Rothman, D. (2020).
 Ulyanov, D., Vedaldi, A., and Lempitsky, V. (2016).
 \newblock Instance normalization: The missing ingredient for fast stylization.
 \newblock {\em arXiv preprint arXiv:1607.08022}.
+
+\bibitem[Vaswani et~al., 2017]{vaswani2017attention}
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.~N.,
+  Kaiser, {\L}., and Polosukhin, I. (2017).
+\newblock Attention is all you need.
+\newblock {\em Advances in neural information processing systems}, 30.
+
+\bibitem[Warden, 2018]{warden2018speech}
+Warden, P. (2018).
+\newblock Speech commands: A dataset for limited-vocabulary speech recognition.
+\newblock {\em arXiv preprint arXiv:1804.03209}.
 
 \end{thebibliography}

@@ -56,9 +56,11 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of the processing of two consecutive feature segments \(\textbf  {X}_{\{i\}}\) and \(\textbf  {X}_{\{i +1\}}\), from \(\textbf  {X}\) comprising the keyword "right", by a DNN acoustic model: (a) when using an overlapping segmentation window, and (b) when using a smaller, non-overlapping one \citep  {lopez2021deep}. \relax }}{4}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:acoustic_model}{{2.3}{4}{Example of the processing of two consecutive feature segments \(\textbf {X}_{\{i\}}\) and \(\textbf {X}_{\{i +1\}}\), from \(\textbf {X}\) comprising the keyword "right", by a DNN acoustic model: (a) when using an overlapping segmentation window, and (b) when using a smaller, non-overlapping one \cite {lopez2021deep}. \relax }{figure.caption.6}{}}
 \newlabel{fig:acoustic_model@cref}{{[figure][3][2]2.3}{[1][4][]4}}
+\citation{dosovitskiy2020image}
 \citation{lopez2021deep}
 \citation{lopez2021deep}
 \citation{lopez2021deep}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Transformer Models}{5}{subsection.2.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Posterior Handling}{5}{section.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Self-Supervised Learning}{6}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -74,43 +76,110 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces An illustration of how data2vec works on different data types, using the same process. The model creates a representation of the original input data and then a masked version of the input.\relax }}{7}{figure.caption.8}\protected@file@percent }
 \newlabel{fig:data2vec_ilu}{{3.1}{7}{An illustration of how data2vec works on different data types, using the same process. The model creates a representation of the original input data and then a masked version of the input.\relax }{figure.caption.8}{}}
 \newlabel{fig:data2vec_ilu@cref}{{[figure][1][3]3.1}{[1][6][]7}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results}{8}{chapter.4}\protected@file@percent }
+\citation{warden2018speech}
+\citation{barker2015third}
+\citation{kolboek2016speech}
+\citation{bovbjerg2023improving}
+\citation{berg2021keyword}
+\citation{bovbjerg2023improving}
+\citation{bovbjerg2023improving}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experiment}{8}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Only Testing on the Same Noise}{8}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Testing on More Noise}{8}{section.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces \relax }}{9}{table.caption.9}\protected@file@percent }
-\newlabel{tab:test_noise}{{4.1}{9}{\relax }{table.caption.9}{}}
-\newlabel{tab:test_noise@cref}{{[table][1][4]4.1}{[1][8][]9}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces \relax }}{10}{table.caption.10}\protected@file@percent }
-\newlabel{tab:test_more_noise}{{4.2}{10}{\relax }{table.caption.10}{}}
-\newlabel{tab:test_more_noise@cref}{{[table][2][4]4.2}{[1][8][]10}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Discussion}{11}{chapter.5}\protected@file@percent }
+\newlabel{ch:experiment}{{4}{8}{Experiment}{chapter.4}{}}
+\newlabel{ch:experiment@cref}{{[chapter][4][]4}{[1][8][]8}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Data}{8}{section.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces How the 105820 recordings are split\relax }}{8}{table.caption.9}\protected@file@percent }
+\newlabel{tab:data_split}{{4.1}{8}{How the 105820 recordings are split\relax }{table.caption.9}{}}
+\newlabel{tab:data_split@cref}{{[table][1][4]4.1}{[1][8][]8}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Model Setup}{8}{section.4.2}\protected@file@percent }
+\citation{bovbjerg2023improving}
+\citation{loshchilov2018fixing}
+\citation{park2019specaugment}
+\citation{bovbjerg2023improving}
+\citation{}
+\citation{bovbjerg2023improving}
+\citation{baevski2022data2vec}
+\citation{bovbjerg2023improving}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Model Training}{9}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Test Setup}{9}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Results}{9}{section.4.4}\protected@file@percent }
+\newlabel{results}{{4.4}{9}{Results}{section.4.4}{}}
+\newlabel{results@cref}{{[section][4][4]4.4}{[1][9][]9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Testing on the Same Noise}{10}{subsection.4.4.1}\protected@file@percent }
+\newlabel{subsec:test1}{{4.4.1}{10}{Testing on the Same Noise}{subsection.4.4.1}{}}
+\newlabel{subsec:test1@cref}{{[subsection][1][4,4]4.4.1}{[1][9][]10}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces KWT-1\relax }}{10}{table.caption.10}\protected@file@percent }
+\newlabel{tab:KWT-1_snrmix_busxbbl}{{4.2}{10}{KWT-1\relax }{table.caption.10}{}}
+\newlabel{tab:KWT-1_snrmix_busxbbl@cref}{{[table][2][4]4.2}{[1][10][]10}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces KWT-2\relax }}{10}{table.caption.11}\protected@file@percent }
+\newlabel{tab:KWT-2_snrmix_busxbbl}{{4.3}{10}{KWT-2\relax }{table.caption.11}{}}
+\newlabel{tab:KWT-2_snrmix_busxbbl@cref}{{[table][3][4]4.3}{[1][10][]10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Testing on More Noise}{10}{subsection.4.4.2}\protected@file@percent }
+\newlabel{subsec:test2}{{4.4.2}{10}{Testing on More Noise}{subsection.4.4.2}{}}
+\newlabel{subsec:test2@cref}{{[subsection][2][4,4]4.4.2}{[1][10][]10}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces KWT-3\relax }}{11}{table.caption.12}\protected@file@percent }
+\newlabel{tab:KWT-3_snrmix_busxbbl}{{4.4}{11}{KWT-3\relax }{table.caption.12}{}}
+\newlabel{tab:KWT-3_snrmix_busxbbl@cref}{{[table][4][4]4.4}{[1][10][]11}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces \relax }}{12}{table.caption.13}\protected@file@percent }
+\newlabel{tab:test_noise_snrmix}{{4.5}{12}{\relax }{table.caption.13}{}}
+\newlabel{tab:test_noise_snrmix@cref}{{[table][5][4]4.5}{[1][10][]12}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces KWT-1\relax }}{13}{table.caption.14}\protected@file@percent }
+\newlabel{tab:KWT-1_snrmix_busxbblxcafxssn}{{4.6}{13}{KWT-1\relax }{table.caption.14}{}}
+\newlabel{tab:KWT-1_snrmix_busxbblxcafxssn@cref}{{[table][6][4]4.6}{[1][10][]13}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces KWT-2\relax }}{13}{table.caption.15}\protected@file@percent }
+\newlabel{tab:KWT-2_snrmix_busxbblxcafxssn}{{4.7}{13}{KWT-2\relax }{table.caption.15}{}}
+\newlabel{tab:KWT-2_snrmix_busxbblxcafxssn@cref}{{[table][7][4]4.7}{[1][10][]13}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.8}{\ignorespaces KWT-3\relax }}{14}{table.caption.16}\protected@file@percent }
+\newlabel{tab:KWT-3_snrmix_busxbblxcafxssn}{{4.8}{14}{KWT-3\relax }{table.caption.16}{}}
+\newlabel{tab:KWT-3_snrmix_busxbblxcafxssn@cref}{{[table][8][4]4.8}{[1][10][]14}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.9}{\ignorespaces \relax }}{15}{table.caption.17}\protected@file@percent }
+\newlabel{tab:test_more_noise_snrmix}{{4.9}{15}{\relax }{table.caption.17}{}}
+\newlabel{tab:test_more_noise_snrmix@cref}{{[table][9][4]4.9}{[1][10][]15}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Discussion}{16}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:discussion}{{5}{11}{Discussion}{chapter.5}{}}
-\newlabel{ch:discussion@cref}{{[chapter][5][]5}{[1][11][]11}}
+\newlabel{ch:discussion}{{5}{16}{Discussion}{chapter.5}{}}
+\newlabel{ch:discussion@cref}{{[chapter][5][]5}{[1][16][]16}}
 \citation{*}
 \bibdata{incl/bib/references.bib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{12}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{17}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{lastofmain}{{6}{12}{Conclusion}{chapter.6}{}}
-\newlabel{lastofmain@cref}{{[chapter][6][]6}{[1][12][]12}}
+\newlabel{lastofmain}{{6}{17}{Conclusion}{chapter.6}{}}
+\newlabel{lastofmain@cref}{{[chapter][6][]6}{[1][17][]17}}
 \bibcite{ba2016layer}{{1}{2016}{{Ba et~al.}}{{}}}
 \bibcite{baevski2022data2vec}{{2}{2022}{{Baevski et~al.}}{{}}}
 \bibcite{balestriero2023cookbook}{{3}{2023}{{Balestriero et~al.}}{{}}}
-\bibcite{bovbjerg2023improving}{{4}{2023}{{Bovbjerg and Tan}}{{}}}
-\bibcite{lopez2021deep}{{5}{2021}{{L{\'o}pez-Espejo et~al.}}{{}}}
-\bibcite{rothman2020artificial}{{6}{2020}{{Rothman}}{{}}}
-\bibcite{ulyanov2016instance}{{7}{2016}{{Ulyanov et~al.}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{13}{chapter*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Constraints}{14}{appendix.A}\protected@file@percent }
+\bibcite{barker2015third}{{4}{2015}{{Barker et~al.}}{{}}}
+\bibcite{berg2021keyword}{{5}{2021}{{Berg et~al.}}{{}}}
+\bibcite{bovbjerg2023improving}{{6}{2023}{{Bovbjerg and Tan}}{{}}}
+\bibcite{dosovitskiy2020image}{{7}{2020}{{Dosovitskiy et~al.}}{{}}}
+\bibcite{kolboek2016speech}{{8}{2016}{{Kolboek et~al.}}{{}}}
+\bibcite{lopez2021deep}{{9}{2021}{{L{\'o}pez-Espejo et~al.}}{{}}}
+\bibcite{loshchilov2018fixing}{{10}{2018}{{Loshchilov and Hutter}}{{}}}
+\bibcite{park2019specaugment}{{11}{2019}{{Park et~al.}}{{}}}
+\bibcite{rothman2020artificial}{{12}{2020}{{Rothman}}{{}}}
+\bibcite{ulyanov2016instance}{{13}{2016}{{Ulyanov et~al.}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{18}{chapter*.18}\protected@file@percent }
+\bibcite{vaswani2017attention}{{14}{2017}{{Vaswani et~al.}}{{}}}
+\bibcite{warden2018speech}{{15}{2018}{{Warden}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Data}{20}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{Appendix:constraints}{{A}{14}{Constraints}{appendix.A}{}}
-\newlabel{Appendix:constraints@cref}{{[appendix][1][2147483647]A}{[1][14][]14}}
-\newlabel{LastPage}{{}{14}{}{page.14}{}}
-\xdef\lastpage@lastpage{14}
-\xdef\lastpage@lastpageHy{14}
-\gdef \@abspage@last{20}
+\newlabel{Appendix:constraints}{{A}{20}{Data}{appendix.A}{}}
+\newlabel{Appendix:constraints@cref}{{[appendix][1][2147483647]A}{[1][20][]20}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces The \(35\) keywords included in the Google Speech Commands V2 data set.\relax }}{20}{table.caption.19}\protected@file@percent }
+\newlabel{tab:google_words}{{A.1}{20}{The \(35\) keywords included in the Google Speech Commands V2 data set.\relax }{table.caption.19}{}}
+\newlabel{tab:google_words@cref}{{[table][1][2147483647,1]A.1}{[1][20][]20}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Results}{20}{section.A.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces The results of training models to a specific noise level with two different types of noise, BUS and BBL. The test consist of the same noises.\relax }}{21}{table.caption.20}\protected@file@percent }
+\newlabel{tab:test_noise}{{A.2}{21}{The results of training models to a specific noise level with two different types of noise, BUS and BBL. The test consist of the same noises.\relax }{table.caption.20}{}}
+\newlabel{tab:test_noise@cref}{{[table][2][2147483647,1]A.2}{[1][20][]21}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces The results of training models to a specific noise level with two different types of noise, BUS and BBL. The test consist of four noises, BUS, BBL, CAF, and SSN\relax }}{22}{table.caption.21}\protected@file@percent }
+\newlabel{tab:test_more_noise}{{A.3}{22}{The results of training models to a specific noise level with two different types of noise, BUS and BBL. The test consist of four noises, BUS, BBL, CAF, and SSN\relax }{table.caption.21}{}}
+\newlabel{tab:test_more_noise@cref}{{[table][3][2147483647,1]A.3}{[1][20][]22}}
+\newlabel{LastPage}{{}{22}{}{page.22}{}}
+\xdef\lastpage@lastpage{22}
+\xdef\lastpage@lastpageHy{22}
+\gdef \@abspage@last{28}

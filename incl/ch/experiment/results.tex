@@ -1,0 +1,365 @@
+\section{Results} \label{results}
+In this section, the results of the test are presented. There are two levels to the test, one where the models are tested on keywords where the same kind of noise is applied, and one where more types of noise are added to the test set. 
+
+\subsection{Testing on the Same Noise} \label{subsec:test1}
+The different models are tested using a test set created of different sound files where the same kind of noise, as the model is trained on, is added. The results are presented in \Cref{tab:test_noise}, where a subtable for each noise level is presented. 
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}llllll@{}}
+        \multicolumn{6}{c}{\textbf{KWT-1}}\\
+        \toprule
+        % &  & & \multicolumn{3}{c}{Data2vec pretraining} \\ \cline{4-6}
+        SNR    & \makecell{ Baseline - \\ Supervised } & \makecell{ Baseline - \\ Deta2vec } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } & \makecell{ Pretrained - \\ Both } \\ \midrule
+        -10  & 0.3460 & -- & 0.3784 & 0.3825 & -- \\
+        -5   & -- & -- & -- & -- & -- \\
+        0    & -- & -- & -- & -- & -- \\
+        5    & -- & -- & -- & -- & -- \\
+        10   & -- & -- & -- & -- & -- \\
+        15   & -- & -- & -- & -- & -- \\
+        20   & -- & -- & -- & -- & -- \\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{KWT-1}
+    \label{tab:KWT-1_snrmix_busxbbl}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}llllll@{}}
+        \multicolumn{6}{c}{\textbf{KWT-2}}\\
+        \toprule
+        % &  & & \multicolumn{3}{c}{Data2vec pretraining} \\ \cline{4-6}
+        SNR    & \makecell{ Baseline - \\ Supervised } & \makecell{ Baseline - \\ Deta2vec } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } & \makecell{ Pretrained - \\ Both } \\ \midrule
+        -10  & 0.3133 & -- & 0.3888 & 0.4052 & -- \\
+        -5   & -- & -- & -- & -- & -- \\
+        0    & -- & -- & -- & -- & -- \\
+        5    & -- & -- & -- & -- & -- \\
+        10   & -- & -- & -- & -- & -- \\
+        15   & -- & -- & -- & -- & -- \\
+        20   & -- & -- & -- & -- & -- \\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{KWT-2}
+    \label{tab:KWT-2_snrmix_busxbbl}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}llllll@{}}
+        \multicolumn{6}{c}{\textbf{KWT-3}}\\
+        \toprule
+        % &  & & \multicolumn{3}{c}{Data2vec pretraining} \\ \cline{4-6}
+        SNR    & \makecell{ Baseline - \\ Supervised } & \makecell{ Baseline - \\ Deta2vec } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } & \makecell{ Pretrained - \\ Both } \\ \midrule
+        -10  & 0.2970 & -- & 0.3602 & 0.3817 & -- \\
+        -5   & -- & -- & -- & -- & -- \\
+        0    & -- & -- & -- & -- & -- \\
+        5    & -- & -- & -- & -- & -- \\
+        10   & -- & -- & -- & -- & -- \\
+        15   & -- & -- & -- & -- & -- \\
+        20   & -- & -- & -- & -- & -- \\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{KWT-3}
+    \label{tab:KWT-3_snrmix_busxbbl}
+\end{table}
+
+
+\begin{table}[ht]
+    \centering
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr-10    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & 0.3460  & 0.3784 & 0.3825 \\
+        KWT-2    & 0.3133  & 0.3888 & 0.4052 \\
+        KWT-3    & 0.2970  & 0.3602 & 0.3817 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr -10}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr-5    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr -5}
+    \end{subtable}
+     
+     
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr0    & \makecell{ Baseline - \\ Supervised } & non-noise & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & --  & -- & 0.698 \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 0}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr5    & \makecell{ Baseline - \\ Supervised } & non-noise & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 5}
+    \end{subtable}
+
+
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr10    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 10}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr15    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 15}
+    \end{subtable}
+
+    
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr20    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & --  & -- & -- \\
+        KWT-2    & --  & -- & -- \\
+        KWT-3    & --  & -- & -- \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 20}
+    \end{subtable}
+    \caption{}
+    \label{tab:test_noise_snrmix}
+\end{table}
+
+
+\subsection{Testing on More Noise}\label{subsec:test2}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}llllll@{}}
+        \multicolumn{6}{c}{\textbf{KWT-1}}\\
+        \toprule
+        % &  & & \multicolumn{3}{c}{Data2vec pretraining} \\ \cline{4-6}
+        SNR    & \makecell{ Baseline - \\ Supervised } & \makecell{ Baseline - \\ Deta2vec } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } & \makecell{ Pretrained - \\ Both } \\ \midrule
+        -10  & 0.2436 & -- & -- & 0.2721 & -- \\
+        -5   & 0.3965 & -- & -- & 0.4583 & -- \\
+        0    & 0.5443 & -- & -- & 0.6304 & -- \\
+        5    & 0.6393 & -- & -- & 0.7378 & -- \\
+        10   & 0.7189 & -- & -- & 0.7916 & -- \\
+        15   & 0.7544 & -- & -- & 0.8234 & -- \\
+        20   & 0.7706 & -- & -- & 0.8420 & -- \\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{KWT-1}
+    \label{tab:KWT-1_snrmix_busxbblxcafxssn}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}llllll@{}}
+        \multicolumn{6}{c}{\textbf{KWT-2}}\\
+        \toprule
+        % &  & & \multicolumn{3}{c}{Data2vec pretraining} \\ \cline{4-6}
+        SNR    & \makecell{ Baseline - \\ Supervised } & \makecell{ Baseline - \\ Deta2vec } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } & \makecell{ Pretrained - \\ Both } \\ \midrule
+        -10  & 0.2093 & -- & -- & 0.2683 & -- \\
+        -5   & 0.3603 & -- & -- & 0.4621 & -- \\
+        0    & 0.5149 & -- & -- & 0.6622 & -- \\
+        5    & 0.6195 & -- & -- & 0.7701 & -- \\
+        10   & 0.6990 & -- & -- & 0.8357 & -- \\
+        15   & 0.7408 & -- & -- & 0.8632 & -- \\
+        20   & 0.7710 & -- & -- & 0.8810 & -- \\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{KWT-2}
+    \label{tab:KWT-2_snrmix_busxbblxcafxssn}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}llllll@{}}
+        \multicolumn{6}{c}{\textbf{KWT-3}}\\
+        \toprule
+        % &  & & \multicolumn{3}{c}{Data2vec pretraining} \\ \cline{4-6}
+        SNR    & \makecell{ Baseline - \\ Supervised } & \makecell{ Baseline - \\ Deta2vec } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } & \makecell{ Pretrained - \\ Both } \\ \midrule
+        -10  & 0.2030 & -- & -- & 0.2579 & -- \\
+        -5   & 0.3507 & -- & -- & 0.4350 & -- \\
+        0    & 0.4961 & -- & -- & 0.6115 & -- \\
+        5    & 0.6061 & -- & -- & 0.7190 & -- \\
+        10   & 0.6806 & -- & -- & 0.7842 & -- \\
+        15   & 0.7256 & -- & -- & 0.8069 & -- \\
+        20   & 0.7522 & -- & -- & 0.8223 & -- \\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{KWT-3}
+    \label{tab:KWT-3_snrmix_busxbblxcafxssn}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr-10    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & 0.2436  & -- & 0.2721 \\
+        KWT-2    & 0.2093  & -- & 0.2684 \\
+        KWT-3    & 0.2030  & -- & 0.2579 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr -10}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr-5    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & 0.3965  & -- & 0.4583 \\
+        KWT-2    & 0.3603  & -- & 0.4621 \\
+        KWT-3    & 0.3507  & -- & 0.4350 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr -5}
+    \end{subtable}
+     
+     
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr0    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & 0.5443  & -- & 0.6304 \\
+        KWT-2    & 0.5149  & -- & 0.6622 \\
+        KWT-3    & 0.4961  & -- & 0.6115 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 0}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr5    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & 0.6393  & -- & 0.7378 \\
+        KWT-2    & 0.6195  & -- & 0.7701 \\
+        KWT-3    & 0.6061  & -- & 0.7190 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 5}
+    \end{subtable}
+
+
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr10    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & 0.7189  & -- & 0.7916 \\
+        KWT-2    & 0.6990  & -- & 0.8357 \\
+        KWT-3    & 0.6806  & -- & 0.7842 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 10}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr15    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & 0.7544  & -- & 0.8234 \\
+        KWT-2    & 0.7408  & -- & 0.8632 \\
+        KWT-3    & 0.7256  & -- & 0.8069 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 15}
+    \end{subtable}
+
+    
+    \bigskip
+
+
+    \begin{subtable}[ht]{0.45\textwidth}
+        \centering
+        \begin{tabular}{@{}llll@{}}
+        \toprule
+        & & \multicolumn{2}{c}{Data2vec pretraining} \\ \cline{3-4}
+        snr20    & \makecell{ Baseline - \\ Supervised } & \makecell{ Pretrained - \\ Noiseless } & \makecell{ Pretrained - \\ Noisy } \\ \midrule
+        KWT-1    & 0.7706  & -- & 0.8420 \\
+        KWT-2    & 0.7710  & -- & 0.8810 \\
+        KWT-3    & 0.7522  & -- & 0.8223 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Snr 20}
+    \end{subtable}
+    \caption{}
+    \label{tab:test_more_noise_snrmix}
+\end{table}

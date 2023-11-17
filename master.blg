@@ -8,44 +8,47 @@ A level-1 auxiliary file: incl/misc/titlepage.aux
 A level-1 auxiliary file: incl/misc/underskrifter.aux
 A level-1 auxiliary file: incl/misc/preface.aux
 Database file #1: incl/bib/references.bib
-You've used 7 entries,
+Warning--I didn't find a database entry for ""
+Warning--empty journal in loshchilov2018fixing
+You've used 15 entries,
             1935 wiz_defined-function locations,
-            515 strings with 5243 characters,
-and the built_in function-call counts, 3166 in all, are:
-= -- 301
-> -- 170
-< -- 4
-+ -- 62
-- -- 60
-* -- 259
-:= -- 555
-add.period$ -- 23
-call.type$ -- 7
-change.case$ -- 63
-chr.to.int$ -- 7
-cite$ -- 7
-duplicate$ -- 119
-empty$ -- 196
-format.name$ -- 69
-if$ -- 619
+            553 strings with 6990 characters,
+and the built_in function-call counts, 6766 in all, are:
+= -- 636
+> -- 388
+< -- 8
++ -- 144
+- -- 138
+* -- 560
+:= -- 1194
+add.period$ -- 48
+call.type$ -- 15
+change.case$ -- 141
+chr.to.int$ -- 15
+cite$ -- 16
+duplicate$ -- 251
+empty$ -- 400
+format.name$ -- 157
+if$ -- 1312
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 38
-num.names$ -- 21
-pop$ -- 69
+missing$ -- 16
+newline$ -- 77
+num.names$ -- 45
+pop$ -- 151
 preamble$ -- 1
-purify$ -- 64
+purify$ -- 142
 quote$ -- 0
-skip$ -- 92
+skip$ -- 198
 stack$ -- 0
-substring$ -- 173
-swap$ -- 23
-text.length$ -- 2
+substring$ -- 337
+swap$ -- 48
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
-warning$ -- 0
-while$ -- 22
+type$ -- 88
+warning$ -- 1
+while$ -- 44
 width$ -- 0
-write$ -- 91
+write$ -- 190
+(There were 2 warnings)

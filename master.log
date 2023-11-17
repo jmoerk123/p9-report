@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.29)  3 NOV 2023 09:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.29)  17 NOV 2023 09:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1213,7 +1213,7 @@ Package caption Info: End \AtBeginDocument code.
 \openout2 = `incl/misc/frontpage.aux'.
 
 (./incl/misc/frontpage.tex
-<incl/main/aau-report-badge.pdf, id=95, 115.43124pt x 77.28876pt>
+<incl/main/aau-report-badge.pdf, id=123, 115.43124pt x 77.28876pt>
 File: incl/main/aau-report-badge.pdf Graphic file (type pdf)
 <use incl/main/aau-report-badge.pdf>
 Package pdftex.def Info: incl/main/aau-report-badge.pdf  used on input line 19.
@@ -1359,7 +1359,7 @@ Chapter 1.
 ]
 Chapter 2.
 (./incl/ch/theory/kws.tex
-<incl/img/kws/deep_kws_system.png, id=165, 1246.6575pt x 345.29pt>
+<incl/img/kws/deep_kws_system.png, id=201, 1246.6575pt x 345.29pt>
 File: incl/img/kws/deep_kws_system.png Graphic file (type png)
 <use incl/img/kws/deep_kws_system.png>
 Package pdftex.def Info: incl/img/kws/deep_kws_system.png  used on input line 7.
@@ -1367,13 +1367,13 @@ Package pdftex.def Info: incl/img/kws/deep_kws_system.png  used on input line 7.
  [2
 
  <./incl/img/kws/deep_kws_system.png>]
-<incl/img/kws/MFCC.png, id=189, 673.51625pt x 393.47pt>
+<incl/img/kws/MFCC.png, id=224, 673.51625pt x 393.47pt>
 File: incl/img/kws/MFCC.png Graphic file (type png)
 <use incl/img/kws/MFCC.png>
 Package pdftex.def Info: incl/img/kws/MFCC.png  used on input line 23.
 (pdftex.def)             Requested size: 426.79135pt x 249.33434pt.
  [3 <./incl/img/kws/MFCC.png>]
-<incl/img/kws/acoustic_model.png, id=214, 842.14626pt x 520.94624pt>
+<incl/img/kws/acoustic_model.png, id=249, 842.14626pt x 520.94624pt>
 File: incl/img/kws/acoustic_model.png Graphic file (type png)
 <use incl/img/kws/acoustic_model.png>
 Package pdftex.def Info: incl/img/kws/acoustic_model.png  used on input line 54.
@@ -1387,7 +1387,7 @@ Overfull \hbox (29.49997pt too wide) in paragraph at lines 8--8
 [] 
  []
 
-<incl/img/data2vec/data2vec_ilu.png, id=246, 863.225pt x 217.81375pt>
+<incl/img/data2vec/data2vec_ilu.png, id=286, 863.225pt x 217.81375pt>
 File: incl/img/data2vec/data2vec_ilu.png Graphic file (type png)
 <use incl/img/data2vec/data2vec_ilu.png>
 Package pdftex.def Info: incl/img/data2vec/data2vec_ilu.png  used on input line 15.
@@ -1396,115 +1396,185 @@ Package pdftex.def Info: incl/img/data2vec/data2vec_ilu.png  used on input line 
 
 ]) [7 <./incl/img/data2vec/data2vec_ilu.png>]
 Chapter 4.
-(./incl/ch/results/results.tex
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 9--18
+(./incl/ch/experiment/experiment.tex [8
+
+]) (./incl/ch/experiment/results.tex [9]
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 75--84
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 23--32
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 89--98
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 41--50
+Overfull \hbox (35.63104pt too wide) in paragraph at lines 107--116
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 55--64
+Overfull \hbox (35.63104pt too wide) in paragraph at lines 121--130
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 73--82
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 139--148
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 87--96
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 153--162
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 105--114
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 171--180
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 126--135
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 256--265
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 140--149
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 270--279
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 158--167
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 288--297
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 172--181
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 302--311
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 190--199
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 320--329
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 204--213
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 334--343
  [][] 
  []
 
 
-Overfull \hbox (15.09212pt too wide) in paragraph at lines 222--231
+Overfull \hbox (48.55826pt too wide) in paragraph at lines 352--361
  [][] 
  []
 
-) [8
-
-] [9] [10]
+) [10] [11] [12] [13] [14] [15]
 Chapter 5.
-(./incl/ch/discussion/discussion.tex) [11
+(./incl/ch/discussion/discussion.tex) [16
 
 ]
 Chapter 6.
-(./incl/ch/conclusion.tex) (./master.bbl [12
+(./incl/ch/conclusion.tex) (./master.bbl [17
 
-]) (./incl/ch/appendix/appendix.tex [13
+] [18
 
-]
+]) (./incl/ch/appendix/appendix.tex [19]
 Appendix A.
+) (./incl/ch/appendix/appendix_results.tex
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 6--15
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 20--29
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 38--47
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 52--61
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 70--79
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 84--93
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 102--111
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 122--131
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 136--145
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 154--163
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 168--177
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 186--195
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 200--209
+ [][] 
+ []
+
+
+Overfull \hbox (15.09212pt too wide) in paragraph at lines 218--227
+ [][] 
+ []
+
 ) 
 AED: lastpage setting LastPage
-[14
+[20
 
-]
+] [21] [22]
 \tf@thm=\write7
 \openout7 = `master.thm'.
 
  (./master.aux (./incl/misc/frontpage.aux) (./incl/misc/colophon.aux) (./incl/misc/titlepage.aux) (./incl/misc/underskrifter.aux) (./incl/misc/preface.aux))
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: A69BC27347528C6255B71EBD5EE67226;2140.
+(rerunfilecheck)             Checksum: 5948C355E5DDC8347BF4DE9DB5CC5E36;2873.
  ) 
 Here is how much of TeX's memory you used:
- 65502 strings out of 478287
- 1610721 string characters out of 5849289
- 2338594 words of memory out of 5000000
- 82365 multiletter control sequences out of 15000+600000
- 613357 words of font info for 230 fonts, out of 8000000 for 9000
+ 65647 strings out of 478287
+ 1613573 string characters out of 5849289
+ 2370359 words of memory out of 5000000
+ 82435 multiletter control sequences out of 15000+600000
+ 618040 words of font info for 249 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,15n,134p,1233b,887s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,19n,134p,1233b,902s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on master.pdf (20 pages, 888177 bytes).
+Output written on master.pdf (28 pages, 909818 bytes).
 PDF statistics:
- 412 PDF objects out of 1000 (max. 8388607)
- 314 compressed objects within 4 object streams
- 62 named destinations out of 1000 (max. 500000)
- 88326 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 543 PDF objects out of 1000 (max. 8388607)
+ 436 compressed objects within 5 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 90430 words of extra memory for PDF output out of 106986 (max. 10000000)
 
