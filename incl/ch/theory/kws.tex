@@ -2,7 +2,7 @@ Keyword spotting (KWS) has developed a lot over the years with one of the earlie
 
 Deep neural networks (DNN) have become very popular and are being used to develop new KWS systems. These systems are referred to as deep KWS systems and have become the new state of the art in KWS. Deep KWS systems do not need any complicated search algorithms like viterbi decoding, and they come with a huge improvement over the keyword/filler HMM approach in the case of low computational complexity \cite{lopez2021deep}. In general, deep KWS systems consist of three steps: speech features extraction, DNN acoustic model, and posterior handling, which is illustrated in \Cref{fig:deep_kws_system}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{incl/img/kws/deep_kws_system.png}
     \caption{ Deep KWS system, from \cite{lopez2021deep}}
@@ -18,7 +18,7 @@ where \(T\) is the amount of feature vectors, and \(K\) is the size of each feat
 
 Some of the popular speech features are the Mel-scale-related features. These could be the log-Mel spectral coefficients and Mel-frequency cepstral coefficients (MFCCs) \cite{lopez2021deep}. The common way to extract the log-Mel spectral and the MFCC features is shown on \Cref{fig:MFCC}. On the figure, it can be seen that to obtain the MFCC features you first have to get the log-Mel spectrogram coefficients, and then apply the discrete cosine transform to it. To stabilize and speed up the training of the DNN acoustic model, the features are normalized to a mean of zero and a standard deviation of one. This will also make the model more generalized \cite{lopez2021deep}. 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{incl/img/kws/MFCC.png}
     \caption{ Classical pipeline for extracting log-Mel spectral and
@@ -49,24 +49,46 @@ where \(n\) denotes the \(n\)'th element of a vector. Denoting \(C_n\) as the \(
 \end{align}
 a softmax activation function \cite{rothman2020artificial} is commonly used on the last layer \cite{lopez2021deep}.
 
-\begin{figure}[h]
+
+\subsection{Transformer Models}
+Transformer models are one of the newer KWS models. The transformer model rely entirely on attention mechanisms using no convolutions or recurrence \cite{}. The transformer model apply self-attention mechanism to focus on different parts of the input. This is possible since it takes the full input sequence at ones, unlike RNNs. This also makes the transformer model more efficient to train since it allows for better parallelization \cite{}. 
+
+The idea behind the attention mechanism is to make the model able to learn which part og the input data to focus on. The self-attention mechanism applied in transformer models works by applying a Scaled Dot Product Attention to the input data which makes it possible, for the model, to attend to different parts of the input \cite{}. 
+
+A Scaled Dot Product get information from the source sequence with is relevant for the target sequence. Specifically, the target sequence would be encoded as \(Q \in \R^{n \times m}\), and the source sequence as \(K \in \R^{n \times m}\), \(V \in \R^{n \times m}\), where \(n\) is the length of the target and source sequences, and \(m\) the is the dimension of the hidden dimension \cite{}. 
+%A Scaled Dot Product Attention takes an input consisting of queries, keys, and values. To obtain the weight of the values the dot product between the query and the key vectors are calculated and divided by the square root of there dimension, whereafter a softmax is applied. In practice the attention is calculated on a set of queries at once, by representing them in a matrix \(Q \in \R^{n \times m}\), where \(m\) is the length of the vectors \cite{}. Likewise, the keys and values are also represented as matrices \(K \in \R^{n \times m}\) and \(V \in \R^{n\times m}\), respectively. 
+The Scaled Dot Product attention is then calculated as:
+\begin{align}
+    Att(Q, K, V) = \texttt{softmax}\qty(\frac{QK^T}{\sqrt{m}})V,
+\end{align} 
+where \(\texttt{softmax}(\cdot)\) is the row-wise softmax \cite{}.
+
+Instead of just using self-attention, the transformer model uses multi-head attention, which is multiple sef-attention modules stacked, concatenated, and linearly projected to the expected transformer output dimension. The projections \(W_i^Q \in \R^{m\times \frac{m}{h}}\), \(W_i^K \in \R^{m\times \frac{m}{h}}\), \(W_i^V \in \R^{m\times \frac{m}{h}}\), and \(W^O \in \R^{m\times m}\)
+\begin{align}
+    MultiHead(Q, K, V) &= Concat(head_1, \dots, head_h)W^O \\
+    \text{where } head_i &= Att(QW^Q_i, KW^K_i, VW^V_i) \quad i\in [1, \dots, h]
+\end{align}
+The pros of using multi-head attention is that it allows the model to attend to different parts of the input, e.g., short-time dependencies and long-term dependencies \cite{}. 
+
+Combining the multi-head attention with a multilayer perceptron (MLP) results in a transformer encoder block, illustrated on REF. %\Cref{}.
+
+% måske snak lidt om den specifikke model der bliver brugt.
+
+% The KWT model is based on a vision transformer \cite{dosovitskiy2020image}, where the image is substituted with Mel-frequency cepstral coefficients (MFCC), which are explained in \Cref{ch:theory}, and have achieved state-of-the-art performance on the Google Speech Commands KWS benchmark.
+
+% Måske ryg det her under ned i næste afsnit.
+\begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{incl/img/kws/acoustic_model.png}
     \caption{Example of the processing of two consecutive feature segments \(\textbf{X}_{\{i\}}\) and \(\textbf{X}_{\{i +1\}}\), from \(\textbf{X}\) comprising the keyword "right", by a DNN acoustic model: (a) when using an overlapping segmentation window, and (b) when using a smaller, non-overlapping one \cite{lopez2021deep}. }
     \label{fig:acoustic_model}
 \end{figure}
 
-To pick which class a certain segment belongs to, one could just pick the class with highest probability, which could lead to different errors. Two cases where this approach will fail are shown in \Cref{fig:acoustic_model}, where an overlapping segment window is used on (a), and a smaller non-overlapping segment is used on (b). In the case of (a) the word "right" is found twice leading to a false positive detection and in the case of (b), "right" is not found a single time, leading to a false negative. This is one of the reasons why a good posterior handling is needed \cite{lopez2021deep}.
-
-\subsection{Transformer Models}
-The keyword transformer 
-
-The KWT model is based on a vision transformer \cite{dosovitskiy2020image}, where the image is substituted with Mel-frequency cepstral coefficients (MFCC), which are explained in \Cref{ch:theory}, and have achieved state-of-the-art performance on the Google Speech Commands KWS benchmark.
-
 \section{Posterior Handling}
 To get a good final decision of class, the sequence of probabilities, \(\textbf{y}^{\{i\}}\), needs to be processed. There are two main modes when applying posterior handling: non-streaming and streaming modes.
 
-\textbf{Non-streaming mode} is the simpler of the two, it is a standard multi-class classification of independent input segments. Since it only works on one segment, the segment needs to be long enough to contain a whole word – this could be around one second. \cite{lopez2021deep}. Posterior handling, in this mode, is the straight forward method of picking the class with the highest probability. This is not a very realistic method, because KWS in not a static task \cite{lopez2021deep}.
+\textbf{Non-streaming mode} is the simpler of the two, it is a standard multi-class classification of independent input segments. Since it only works on one segment, the segment needs to be long enough to contain a whole word – this could be around one second \cite{lopez2021deep}. Posterior handling, in this mode, is the straight forward method of picking the class with the highest probability. This is not a very realistic method, because KWS in not a static task \cite{lopez2021deep}. Two cases where this approach will fail are shown in \Cref{fig:acoustic_model}, where an overlapping segment window is used on (a), and a smaller non-overlapping segment is used on (b). In the case of (a) the word "right" is found twice leading to a false positive detection and in the case of (b), "right" is not found a single time, leading to a false negative. This is one of the reasons why a good posterior handling is needed \cite{lopez2021deep}.
+
 
 \textbf{Streaming mode} is, on the other hand, when the processing happens continuously, and normally in real-time \cite{lopez2021deep}. In this mode, the output sequence of probabilities from the acoustic model
 \begin{align}
